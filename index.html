@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+        font-family: "Arial", sans-serif;
+      }
+
+      #scene-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+      }
+
+      .info-panel {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        backdrop-filter: blur(5px);
+        font-size: 14px;
+      }
+
+      .info-panel h2 {
+        color: #ffff00;
+        margin-bottom: 10px;
+      }
+
+      .info-panel p {
+        margin: 5px 0;
+        color: #ffffff;
+      }
+
+      .controls-hint {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: white;
+        backdrop-filter: blur(5px);
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene-container"></div>
+    <div class="info-panel">
+      <p>🌞 Sun at the center</p>
+      <p>☿ Mercury - Closest to Sun</p>
+      <p>♀ Venus - Second planet</p>
+      <p>🌍 Earth - Our home</p>
+      <p>♂ Mars - The red planet</p>
+      <p>♃ Jupiter - Largest planet</p>
+      <p>♄ Saturn - Ringed planet</p>
+      <p>⛢ Uranus - Ice giant</p>
+      <p>♆ Neptune - Most distant</p>
+    </div>
+
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/",
+          "three/examples/": "https://unpkg.com/three@0.159.0/examples/"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
